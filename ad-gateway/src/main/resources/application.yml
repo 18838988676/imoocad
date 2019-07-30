@@ -8,13 +8,14 @@ eureka:
     service-url:
       defaultZone: http://server1:8000/eureka/
 
+#以后就要通过网关来访问：http://localhost:9000/imooc/ad-sponsor/*controller    http://localhost:9000/imooc/ad-search/index
 zuul:
   prefix: /imooc
   routes:
     sponsor:
       path: /ad-sponsor/**
       serviceId: eureka-client-ad-sponsor
-      strip-prefix: false
+      strip-prefix: false #不过滤前缀   /ad-sponsor/**
     search:
       path: /ad-search/**
       serviceId: eureka-client-ad-search

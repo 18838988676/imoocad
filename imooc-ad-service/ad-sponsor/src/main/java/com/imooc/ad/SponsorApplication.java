@@ -9,7 +9,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 /**
  * Created by Qinyi.
  */
-@EnableFeignClients
+@EnableFeignClients //使用这个访问其他的微服务
 @EnableCircuitBreaker
 @EnableEurekaClient
 @SpringBootApplication
